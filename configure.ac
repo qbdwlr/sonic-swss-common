@@ -14,9 +14,6 @@ AM_PATH_PYTHON
 AM_PATH_PYTHON3
 
 AC_CHECK_LIB([hiredis], [redisConnect])
-PKG_CHECK_MODULES([LIBNL], [libnl-3.0 libnl-genl-3.0 libnl-route-3.0 libnl-nf-3.0])
-        CFLAGS="$CFLAGS $LIBNL_CFLAGS"
-        LIBS="$LIBS $LIBNL_LIBS"
 
 LDFLAGS="-Wl,--no-undefined $LDFLAGS"
 AC_SUBST([LDFLAGS])
